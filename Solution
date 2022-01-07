@@ -1,0 +1,44 @@
+// A Simple Calculator Program
+import java.util.Scanner;
+public class Solution {
+
+        public static void main(String[] args) {
+            Scanner input = new Scanner(System.in);
+            System.out.print("Enter 1 for collection.\nEnter 2 for extraction.\n");
+            System.out.println("Enter 3 for multiplication.\nEnter 4 for division.");
+            int n = input.nextInt();
+            if(n<0 || n>4) {
+                System.out.print("Enter a Wrong Number. Please Try Again.");
+            } else {
+                System.out.print("Enter first number: ");
+                int number1 = input.nextInt();
+                System.out.print("Enter second number: ");
+                int number2 = input.nextInt();
+                switch (n) {
+                    case 1:
+                        int collection = number1 + number2;
+                        System.out.print("Collection: " + collection);
+                        break;
+                    case 2:
+                        int extraction = number1 - number2;
+                        System.out.print("Extraction: " + extraction);
+                        break;
+                    case 3:
+                        int multiplication = number1 * number2;
+                        System.out.print("Multiplication: " + multiplication);
+                        break;
+                    case 4:
+                        if (number2 == 0) {
+                            System.out.print("it cannot be divided by zero. Please try again.");
+                        } else {
+                            double b = (double) number1/number2;
+                            System.out.print("Division: " + b);
+                        }
+                        break;
+                }
+            }
+
+
+        }
+
+}
